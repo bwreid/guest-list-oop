@@ -39,7 +39,7 @@ class Party {
   }
 
   enter (guest) {
-    this.currentGuests.push(guest)
+      if (this.guestList.includes(guest) && this.population() < this.venue.capacity) this.currentGuests.push(guest)
   }
 
   leave (guest) {
